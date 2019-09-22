@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+    int n,i,j;
+
+int mid,num;
+//printf("Enter the n : ");
+scanf("%d",&mid);
+num=mid*2-1;
+for(int i=1; i<=num; i++)
+{
+    for(int j=1; j<=num; j++)
+    {
+        if(j>=i&&j<=2*mid-i)
+            printf("%d ",mid-i+1);
+        else if(i>=mid && j>=2*mid-i && j<=i)
+            printf("%d ",i-mid+1);
+        else if(i>=j&&i<=2*mid-j)
+            printf("%d ",mid-j+1);
+        else if(j>=mid && i>=2*mid-j && i<=j)
+            printf("%d ",j-mid+1);
+    }
+    printf("\n");
+}
+    return 0;
+}
+   
